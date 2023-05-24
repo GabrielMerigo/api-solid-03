@@ -1,0 +1,31 @@
+{
+  "name": "api-solid-03",
+  "version": "1.0.0",
+  "description": "api-solid-03",
+  "main": "server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielMerigo/api-solid-03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielMerigo/api-solid-03/issues"
+  },
+  "homepage": "https://github.com/GabrielMerigo/api-solid-03#readme",
+  "devDependencies": {
+    "@types/node": "20.2.3",
+    "tsup": "6.7.0",
+    "tsx": "3.12.7",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "fastify": "4.17.0"
+  }
+}
