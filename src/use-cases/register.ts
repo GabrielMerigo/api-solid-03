@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { UsersRepository } from "@/repositories/users-repository/user-repository-types";
+import { UsersRepository } from "@/repositories/user-repository-types";
 import { hash } from "bcryptjs";
 
 interface RegisterUseCaseParams {
