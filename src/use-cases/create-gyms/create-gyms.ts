@@ -24,11 +24,13 @@ export class CreateGymUseCaseCase {
     title,
   }: CreateGymUseCaseCaseParams): Promise<CreateGymUseCaseCaseResponse> {
     const gym = await this.gymsRepository.create({
-      name,
-      email,
-      password_hash,
+      description,
+      phone,
+      latitude,
+      longitude,
+      title,
     });
 
-    return { user };
+    return { gym };
   }
 }
