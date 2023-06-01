@@ -8,12 +8,12 @@ let gymsRepository: InMemoryGymsRepository;
 let sut: CheckInUseCase;
 
 describe("Check-in Use Case", () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     checkInsRepository = new InMemoryCheckInsRepository();
     gymsRepository = new InMemoryGymsRepository();
     sut = new CheckInUseCase(checkInsRepository, gymsRepository);
 
-    gymsRepository.items.push({
+    await gymsRepository.create({
       id: "gym-01",
       description: "",
       latitude: "-30.0187552",
@@ -36,8 +36,6 @@ describe("Check-in Use Case", () => {
       userLatitude: "-30.0187552",
       userLongitude: "-51.1969692",
     });
-
-    console.log(checkIn.created_at);
 
     expect(checkIn.id).toEqual(expect.any(String));
   });
