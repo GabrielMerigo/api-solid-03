@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "api-solid-03",
   "main": "server.js",
+  "module": "CommonJS",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
