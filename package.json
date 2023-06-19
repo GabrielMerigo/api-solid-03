@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/GabrielMerigo/api-solid-03#readme",
   "dependencies": {
+    "@fastify/cookie": "8.3.0",
     "@fastify/jwt": "7.0.0",
     "@prisma/client": "4.14.1",
     "@types/bcryptjs": "2.4.2",
