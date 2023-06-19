@@ -12,8 +12,6 @@ export const nearby = async (request: FastifyRequest, reply: FastifyReply) => {
     }),
   });
 
-  console.log(request.query);
-
   const { latitude, longitude } = nearbyGymsQuerySchema.parse(request.query);
 
   const fetchNearbyGymsUseCase = makeFetchNearbyGymsUseCase();
