@@ -22,21 +22,25 @@ export const authenticate = async (
       password,
     });
 
-    const refreshToken = await reply.jwtSign(
-      {},
+    const token = await reply.jwtSign(
+      {
+        role: user.role,
+      },
       {
         sign: {
           sub: user.id,
-          expiresIn: "7d",
         },
       }
     );
 
-    const token = await reply.jwtSign(
-      {},
+    const refreshToken = await reply.jwtSign(
+      {
+        role: user.role,
+      },
       {
         sign: {
           sub: user.id,
+          expiresIn: "7d",
         },
       }
     );
@@ -57,6 +61,4 @@ export const authenticate = async (
       return reply.status(400).send({ message: error.message });
     }
   }
-
-  return reply.status(200).send();
 };
